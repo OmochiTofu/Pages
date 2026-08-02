@@ -38,7 +38,7 @@
     <h1 style="font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;font-size:30px;line-height:1.4;margin:22px 0 8px;font-weight:700;color:#2f2318;">おもちととうふの<br>将棋本暗記</h1>
     <p style="font-size:16px;line-height:1.9;color:#6b5a49;margin:0 0 28px;">将棋本の棋譜を効率よく暗記するためのアプリです。<br>KIFファイル読込・棋譜入力・棋譜ならべ・確認テストに対応。</p>
 
-    <a href="{{ appStoreUrl }}" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
+    <a href="https://apps.apple.com/jp/app/id6786072389" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
       <span style="font-size:20px;line-height:1;"></span>
       App Storeで入手
     </a>
@@ -76,15 +76,34 @@
       <p style="text-align:center;font-size:14px;color:#c9b8a0;margin:0 0 32px;">暗記に必要な機能だけを、丁寧に。</p>
 
       <div style="display:flex;flex-direction:column;gap:22px;">
-        <sc-for list="{{ features }}" as="f" hint-placeholder-count="4">
-          <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
-            <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
-            <div>
-              <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">{{ f.title }}</div>
-              <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">{{ f.desc }}</div>
-            </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
+          <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">KIFファイル読込</div>
+            <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">お手持ちのKIFファイルをそのまま読み込んで、暗記をすぐに始められます。</div>
           </div>
-        </sc-for>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
+          <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">棋譜入力(分岐・図名対応)</div>
+            <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">本の棋譜を手入力するときも、分岐や図名にきちんと対応。</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
+          <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">棋譜ならべ(符号のみ・ヒント表示)</div>
+            <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">符号だけを見ながら並べる練習。詰まったらヒントでそっと後押し。</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
+          <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
+          <div>
+            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">確認テスト</div>
+            <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">並べ終えたら確認テストへ。「覚えたつもり」をなくします。</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -115,7 +134,7 @@
   <!-- CTA -->
   <section style="max-width:520px;margin:0 auto;padding:24px 24px 64px;text-align:center;">
     <img src="images/mascot-celebrate.png" alt="" style="width:140px;height:140px;object-fit:contain;margin:0 auto 20px;display:block;">
-    <a href="{{ appStoreUrl }}" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
+    <a href="https://apps.apple.com/jp/app/id6786072389" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
       <span style="font-size:20px;line-height:1;"></span>
       App Storeで入手
     </a>
@@ -131,7 +150,7 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 430, &quot;height&quot;: 900}, &quot;appStoreUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apps.apple.com/&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 430, &quot;height&quot;: 900}}">
 class Component extends DCLogic {
   sakuraRef = React.createRef();
 
@@ -183,15 +202,8 @@ class Component extends DCLogic {
 
   renderVals() {
     return {
-      appStoreUrl: this.props.appStoreUrl || "https://apps.apple.com/",
       sakuraRef: this.sakuraRef,
       sakuraLayerStyle: "position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden;",
-      features: [
-        { title: "KIFファイル読込", desc: "お手持ちのKIFファイルをそのまま読み込んで、暗記をすぐに始められます。", imgHint: "screenshot\nimages/screen01.png\nKIFファイル読込" },
-        { title: "棋譜入力（分岐・図名対応）", desc: "本の棋譜を手入力するときも、分岐や図名にきちんと対応。", imgHint: "screenshot\nimages/screen02.png\n棋譜入力" },
-        { title: "棋譜ならべ（符号のみ・ヒント表示）", desc: "符号だけを見ながら並べる練習。詰まったらヒントでそっと後押し。", imgHint: "screenshot\nimages/screen03.png\n棋譜ならべ" },
-        { title: "確認テスト", desc: "並べ終えたら確認テストへ。「覚えたつもり」をなくします。", imgHint: "screenshot\nimages/screen04.png\n確認テスト" },
-      ],
     };
   }
 }
