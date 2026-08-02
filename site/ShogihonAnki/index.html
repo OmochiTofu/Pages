@@ -27,7 +27,7 @@
       <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:flex-end;font-size:12.5px;font-weight:700;letter-spacing:0.02em;">
         <a href="howto.html">使い方</a>
         <a href="privacy.html">プライバシーポリシー</a>
-        <a href="https://forms.cloud.microsoft/r/EUU2ikpCLp" target="_blank" rel="noopener" style="background:#2b2a2f;color:#fdf8ef;padding:8px 14px;border-radius:999px;">お問い合わせ</a>
+        <a href="https://forms.cloud.microsoft/r/EUU2ikpCLp" target="_blank" rel="noopener" style="background:#2b2a2f;color:#fdf8ef;padding:8px 14px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;">お問い合わせ<img src="images/icon-link.png" alt="" style="width:12px;height:12px;object-fit:contain;filter:invert(1);"></a>
       </div>
     </div>
   </nav>
@@ -38,9 +38,10 @@
     <h1 style="font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;font-size:30px;line-height:1.4;margin:22px 0 8px;font-weight:700;color:#2f2318;">おもちととうふの<br>将棋本暗記</h1>
     <p style="font-size:16px;line-height:1.9;color:#6b5a49;margin:0 0 28px;">将棋本の棋譜を効率よく暗記するためのアプリです。<br>KIFファイル読込・棋譜入力・棋譜ならべ・確認テストに対応。</p>
 
-    <a href="https://apps.apple.com/jp/app/id6786072389" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
+    <a href="https://apps.apple.com/jp/app/id6786072389" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
       <span style="font-size:20px;line-height:1;"></span>
       App Storeで入手
+      <img src="images/icon-link.png" alt="" style="width:14px;height:14px;object-fit:contain;filter:invert(1);">
     </a>
     <p style="margin:16px 0 0;font-size:13px;color:#9a8874;">iOS 26.1以降</p>
   </section>
@@ -134,9 +135,10 @@
   <!-- CTA -->
   <section style="max-width:520px;margin:0 auto;padding:24px 24px 64px;text-align:center;">
     <img src="images/mascot-celebrate.png" alt="" style="width:140px;height:140px;object-fit:contain;margin:0 auto 20px;display:block;">
-    <a href="https://apps.apple.com/jp/app/id6786072389" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
+    <a href="https://apps.apple.com/jp/app/id6786072389" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
       <span style="font-size:20px;line-height:1;"></span>
       App Storeで入手
+      <img src="images/icon-link.png" alt="" style="width:14px;height:14px;object-fit:contain;filter:invert(1);">
     </a>
   </section>
 
@@ -145,26 +147,31 @@
     <div style="max-width:560px;margin:0 auto;text-align:center;font-size:12px;color:#a89880;">© 2026 Toshiharu</div>
   </footer>
 
-  <div style="{{ sakuraLayerStyle }}" ref="{{ sakuraRef }}"></div>
 
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 430, &quot;height&quot;: 900}}">
 class Component extends DCLogic {
-  sakuraRef = React.createRef();
-
   componentDidMount() {
+    // Appended directly to document.body (not this component's DOM subtree) so the
+    // layer stays position:fixed to the real viewport even if an ancestor element
+    // elsewhere on the page has a CSS transform, which would otherwise turn
+    // "fixed" into "absolute-relative-to-that-ancestor" and break/clip the effect.
+    this._sakuraLayer = document.createElement("div");
+    this._sakuraLayer.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:99999;overflow:hidden;";
+    document.body.appendChild(this._sakuraLayer);
     this._sakuraTimer = setInterval(() => this._spawnPetals(5), 2000);
     this._spawnPetals(5);
   }
 
   componentWillUnmount() {
     clearInterval(this._sakuraTimer);
+    if (this._sakuraLayer) this._sakuraLayer.remove();
   }
 
   _spawnPetals(count) {
-    const layer = this.sakuraRef.current;
+    const layer = this._sakuraLayer;
     if (!layer) return;
     const w = window.innerWidth;
     const h = window.innerHeight;
@@ -201,10 +208,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    return {
-      sakuraRef: this.sakuraRef,
-      sakuraLayerStyle: "position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden;",
-    };
+    return {};
   }
 }
 
