@@ -1,14 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+
+<!-- ===== SEO ここから =====
+-->
+<title>将棋本暗記アプリ｜将棋の本・定跡を覚える 棋譜ならべアプリ「おもちととうふの将棋本暗記」</title>
+<meta name="description" content="将棋の本を覚えるための将棋本暗記アプリ。定跡書・棋書の手順を登録し、棋譜ならべモードと確認テストモードでくり返し暗記できます。将棋の定跡の覚え方に悩む方、将棋盤がなくても棋譜並べをしたい方へ。KIFファイル読込・分岐入力に対応したiPhone / iPad向けアプリです。">
+<meta name="keywords" content="将棋 暗記,将棋 本 覚える,将棋 本,将棋本 暗記,将棋本暗記,将棋 定跡 覚え方,定跡 暗記,定跡書,棋書,棋譜ならべ,棋譜並べ アプリ,将棋 勉強 アプリ,将棋 アプリ,将棋盤なし,KIF 読み込み">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Toshiharu">
+<meta name="theme-color" content="#f7f1e6">
+<link rel="canonical" href="https://omochitofu.github.io/Pages/site/ShogihonAnki/index.html">
 <link rel="icon" href="images/icon.png">
+<link rel="apple-touch-icon" href="images/icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="おもちととうふの将棋本暗記">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="将棋本暗記アプリ｜将棋の本・定跡を覚える「おもちととうふの将棋本暗記」">
+<meta property="og:description" content="将棋の本を覚えるための学習アプリ。棋譜ならべモードと確認テストモードで、定跡書・棋書の手順を効率よく暗記できます。">
+<meta property="og:url" content="https://omochitofu.github.io/Pages/site/ShogihonAnki/index.html">
+<meta property="og:image" content="https://omochitofu.github.io/Pages/site/ShogihonAnki/images/icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="将棋本暗記アプリ｜将棋の本・定跡を覚える「おもちととうふの将棋本暗記」">
+<meta name="twitter:description" content="将棋の定跡の覚え方に。棋譜ならべ＋確認テストで将棋本をしっかり暗記。">
+<meta name="twitter:image" content="https://omochitofu.github.io/Pages/site/ShogihonAnki/images/icon.png">
+<meta name="apple-itunes-app" content="app-id=6786072389">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://omochitofu.github.io/Pages/site/ShogihonAnki/#website",
+      "url": "https://omochitofu.github.io/Pages/site/ShogihonAnki/index.html",
+      "name": "おもちととうふの将棋本暗記",
+      "inLanguage": "ja",
+      "description": "将棋本の棋譜を並べて覚える将棋本暗記アプリの公式サイト"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://omochitofu.github.io/Pages/site/ShogihonAnki/#app",
+      "name": "おもちととうふの将棋本暗記",
+      "alternateName": ["将棋本暗記", "将棋本暗記アプリ", "将棋 暗記アプリ", "将棋 定跡 暗記アプリ", "棋譜ならべアプリ"],
+      "keywords": "将棋 暗記, 将棋 本 覚える, 将棋 本, 将棋 定跡, 将棋 定跡 覚え方, 定跡 暗記, 棋書, 将棋本, 棋譜ならべ, 棋譜並べ, 棋譜並べ アプリ, 将棋 勉強, 将棋 勉強 アプリ, KIF 読み込み",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "iOS 26.1以降",
+      "inLanguage": "ja",
+      "url": "https://omochitofu.github.io/Pages/site/ShogihonAnki/index.html",
+      "image": "https://omochitofu.github.io/Pages/site/ShogihonAnki/images/icon.png",
+      "installUrl": "https://apps.apple.com/jp/app/id6786072389",
+      "downloadUrl": "https://apps.apple.com/jp/app/id6786072389",
+      "description": "将棋の本（定跡書・棋書）の棋譜を登録し、棋譜ならべモードと確認テストモードでくり返し暗記できるiPhone / iPad向け学習アプリ。将棋の定跡の覚え方に悩む方や、将棋盤がない場所で棋譜並べをしたい方に。KIFファイル読込、分岐・図名付きの棋譜入力に対応。",
+      "featureList": ["KIFファイル読込", "分岐・図名に対応した棋譜入力", "棋譜ならべモード（ヒント表示・符号のみ表示）", "確認テストモードによる定着度チェック"],
+      "author": { "@type": "Person", "name": "Toshiharu" }
+    }
+  ]
+}
+</script>
+<!-- ===== SEO ここまで ===== -->
+
+<script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
-
 <helmet>
   <link rel="icon" href="images/icon.png">
   <style>
@@ -28,46 +86,47 @@
     <div style="max-width:640px;margin:0 auto;display:flex;align-items:center;justify-content:flex-end;gap:16px;padding:14px 20px;">
       <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:flex-end;font-size:12.5px;font-weight:700;letter-spacing:0.02em;">
         <span style="color:#2f2318;position:relative;">ホーム<span style="position:absolute;left:0;right:0;bottom:-6px;height:2px;background:oklch(75% 0.09 60);border-radius:2px;"></span></span>
-        <a href="howto.html">使い方</a>
-        <a href="privacy.html">プライバシーポリシー</a>
-        <a href="https://forms.cloud.microsoft/r/EUU2ikpCLp" target="_blank" rel="noopener" style="background:#2b2a2f;color:#fdf8ef;padding:8px 14px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;">お問い合わせ<img src="images/link.png" alt="" style="width:12px;height:12px;object-fit:contain;filter:invert(1);"></a>
+        <a href="howto.html" title="将棋本暗記アプリの使い方">使い方</a>
+        <a href="privacy.html" title="プライバシーポリシー">プライバシーポリシー</a>
+        <a href="https://forms.cloud.microsoft/r/EUU2ikpCLp" target="_blank" rel="noopener" style="background:#2b2a2f;color:#fdf8ef;padding:8px 14px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;">お問い合わせ<img src="images/link.png" alt="" width="12" height="12" style="width:12px;height:12px;object-fit:contain;filter:invert(1);"></a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <section style="max-width:520px;margin:0 auto;padding:44px 24px 40px;text-align:center;position:relative;">
-    <img src="images/icon.png" alt="おもちととうふの将棋本暗記 アイコン" style="width:112px;height:112px;object-fit:contain;border-radius:26px;box-shadow:0 10px 30px rgba(60,40,20,0.18);background:#fff;padding:6px;">
+    <img src="images/icon.png" alt="将棋本暗記アプリ「おもちととうふの将棋本暗記」のアプリアイコン" width="112" height="112" style="width:112px;height:112px;object-fit:contain;border-radius:26px;box-shadow:0 10px 30px rgba(60,40,20,0.18);background:#fff;padding:6px;">
     <h1 style="font-size:30px;line-height:1.4;margin:22px 0 8px;font-weight:700;color:#2f2318;">おもちととうふの<br>将棋本暗記</h1>
-    <p style="font-size:16px;line-height:1.9;color:#6b5a49;margin:0 0 28px;">将棋本のおともに!<br>将棋本を楽しく効率よく覚えるための学習アプリです。</p>
+    <p style="font-size:16px;line-height:1.9;color:#6b5a49;margin:0 0 28px;">将棋本のおともに!<br>将棋の定跡書を楽しく効率よく覚えるための学習アプリです。</p>
 
     <a href="https://apps.apple.com/jp/app/id6786072389" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
       App Storeで入手
-      <img src="images/link.png" alt="" style="width:14px;height:14px;object-fit:contain;filter:invert(1);">
+      <img src="images/link.png" alt="" width="14" height="14" style="width:14px;height:14px;object-fit:contain;filter:invert(1);">
     </a>
     <p style="margin:16px 0 0;font-size:13px;color:#9a8874;">iOS 26.1以降</p>
   </section>
 
   <!-- 2 MODES -->
   <section style="max-width:560px;margin:0 auto;padding:24px 20px 48px;">
-    <h2 style="text-align:center;font-size:22px;font-weight:700;color:#2f2318;margin:0 0 28px;">2つのモード</h2>
+    <h2 style="text-align:center;font-size:22px;font-weight:700;color:#2f2318;margin:0 0 28px;">将棋本を覚える2つのモード</h2>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:14px;">
       <div style="flex:1 1 220px;background:#fffdf8;border:1px solid #e9dfcc;border-radius:16px;padding:16px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-          <img src="images/icon-hint-orange.png" alt="" style="width:22px;height:22px;object-fit:contain;">
-          <div style="font-weight:700;font-size:15.5px;">棋譜ならべモード</div>
+          <img src="images/icon-hint-orange.png" alt="" width="22" height="22" style="width:22px;height:22px;object-fit:contain;">
+          <h3 style="font-weight:700;font-size:15.5px;margin:0;">棋譜ならべモード</h3>
         </div>
         <div style="font-size:13px;color:#7a6a58;line-height:1.7;margin-bottom:14px;min-height:70px;">符号を見ながら盤に並べる練習モード。ヒント表示でサクサク並べられます。</div>
-        <img src="images/mode-narabe.png" alt="棋譜ならべモードの画面" style="width:100%;border-radius:10px;display:block;box-shadow:0 6px 16px rgba(60,40,20,0.15);">
+
+        <img src="images/mode-narabe.png" alt="将棋本暗記アプリの棋譜ならべモードの画面。符号を見ながら将棋盤に駒を並べる" style="width:100%;border-radius:10px;display:block;box-shadow:0 6px 16px rgba(60,40,20,0.15);">
       </div>
       <div style="flex:1 1 220px;background:#fffdf8;border:1px solid #e9dfcc;border-radius:16px;padding:16px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-          <img src="images/icon-hint-pink.png" alt="" style="width:22px;height:22px;object-fit:contain;">
-          <div style="font-weight:700;font-size:15.5px;">確認テストモード</div>
+          <img src="images/icon-hint-pink.png" alt="" width="22" height="22" style="width:22px;height:22px;object-fit:contain;">
+          <h3 style="font-weight:700;font-size:15.5px;margin:0;">確認テストモード</h3>
         </div>
         <div style="font-size:13px;color:#7a6a58;line-height:1.7;margin-bottom:14px;min-height:70px;">並べた棋譜が身についたか、確認テストでチェックできます。</div>
-        <img src="images/mode-test.png" alt="確認テストモードの画面" style="width:100%;border-radius:10px;display:block;box-shadow:0 6px 16px rgba(60,40,20,0.15);">
+        <img src="images/mode-test.png" alt="将棋本暗記アプリの確認テストモードの画面。覚えた棋譜の定着度をチェックする" style="width:100%;border-radius:10px;display:block;box-shadow:0 6px 16px rgba(60,40,20,0.15);">
       </div>
     </div>
   </section>
@@ -81,28 +140,28 @@
         <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
           <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
           <div>
-            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">KIFファイル読込</div>
+            <h3 style="font-weight:700;font-size:16px;color:#fdf8ef;margin:0 0 6px;">KIFファイル読込</h3>
             <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">外部の棋譜をそのまま取り込み、学習に活用できます。</div>
           </div>
         </div>
         <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
           <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
           <div>
-            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">棋譜入力</div>
+            <h3 style="font-weight:700;font-size:16px;color:#fdf8ef;margin:0 0 6px;">棋譜入力</h3>
             <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">分岐や図名にも対応し、書籍の内容をそのまま登録できます。</div>
           </div>
         </div>
         <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
           <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
           <div>
-            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">棋譜ならべ</div>
+            <h3 style="font-weight:700;font-size:16px;color:#fdf8ef;margin:0 0 6px;">棋譜ならべ</h3>
             <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">符号のみ表示、ヒント表示など、好みに合わせて設定できます。</div>
           </div>
         </div>
         <div style="display:flex;gap:14px;align-items:flex-start;border-bottom:1px solid #453626;padding-bottom:22px;">
           <span style="flex:none;width:8px;height:8px;border-radius:50%;background:oklch(75% 0.09 60);margin-top:8px;"></span>
           <div>
-            <div style="font-weight:700;font-size:16px;color:#fdf8ef;margin-bottom:6px;">確認テスト</div>
+            <h3 style="font-weight:700;font-size:16px;color:#fdf8ef;margin:0 0 6px;">確認テスト</h3>
             <div style="font-size:13.5px;color:#c9b8a0;line-height:1.8;">どれだけ覚えたかを判定し、定着度を把握できます。</div>
           </div>
         </div>
@@ -115,7 +174,7 @@
     <h2 style="text-align:center;font-size:22px;font-weight:700;color:#2f2318;margin:0 0 32px;">こんな人におすすめです</h2>
 
     <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:8px;">
-      <img src="images/mascot-tired.png" alt="" style="width:96px;height:96px;object-fit:contain;flex:none;">
+      <img src="images/mascot-tired.png" alt="" width="96" height="96" style="width:96px;height:96px;object-fit:contain;flex:none;">
       <div style="display:flex;flex-direction:column;gap:16px;padding-top:6px;">
         <div style="display:flex;gap:10px;align-items:flex-start;">
           <span style="color:oklch(75% 0.09 60);font-weight:700;font-size:16px;flex:none;">◯</span>
@@ -127,7 +186,7 @@
         </div>
         <div style="display:flex;gap:10px;align-items:flex-start;">
           <span style="color:#2b2a2f;font-weight:700;font-size:16px;flex:none;">◯</span>
-          <span style="font-size:14.5px;line-height:1.8;color:#4a3b2c;">「覚えたつもり」をなくしたい</span>
+          <span style="font-size:14.5px;line-height:1.8;color:#4a3b2c;">定跡の「覚えたつもり」をなくしたい</span>
         </div>
       </div>
     </div>
@@ -135,16 +194,23 @@
 
   <!-- CTA -->
   <section style="max-width:520px;margin:0 auto;padding:24px 24px 64px;text-align:center;">
-    <img src="images/mascot-celebrate.png" alt="" style="width:140px;height:140px;object-fit:contain;margin:0 auto 20px;display:block;">
+    <img src="images/mascot-celebrate.png" alt="" width="140" height="140" style="width:140px;height:140px;object-fit:contain;margin:0 auto 20px;display:block;">
     <a href="https://apps.apple.com/jp/app/id6786072389" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#2b2a2f;color:#fdf8ef;padding:14px 28px;border-radius:14px;font-size:16px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,0.18);">
       App Storeで入手
-      <img src="images/link.png" alt="" style="width:14px;height:14px;object-fit:contain;filter:invert(1);">
+      <img src="images/link.png" alt="" width="14" height="14" style="width:14px;height:14px;object-fit:contain;filter:invert(1);">
     </a>
   </section>
 
   <!-- FOOTER -->
   <footer style="border-top:1px solid #e5d9c2;padding:24px 20px 36px;">
-    <div style="max-width:560px;margin:0 auto;text-align:center;font-size:12px;color:#a89880;">© 2026 Toshiharu</div>
+    <div style="max-width:560px;margin:0 auto;text-align:center;">
+      <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:12.5px;font-weight:700;margin-bottom:14px;">
+        <a href="index.html">ホーム</a>
+        <a href="howto.html">使い方</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+      </div>
+      <div style="font-size:12px;color:#a89880;">© 2026 Toshiharu</div>
+    </div>
   </footer>
 
 </div>
